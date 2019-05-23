@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+color: #777777;
+text-decoration:none; 
+}
+
+html, body {
+font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+color: #777777;
+background-image: url("../Images/leaves-pattern.png");
+height: 100%;
+}
+
+/*footer */
+.body-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.sticky-footer {
+    width: 100%;
+    max-width: 960px;
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex-shrink:0;
+    background-color: #666666;
+    border-top: 8px solid #4aaaa5;
+    width: 100%;
+    text-align: center;
+    height: 65px; 
+}
+
+/* h2 Global */
+h2 {
+    color: #4aaaa5;
+    border-bottom: 1px solid #cccccc;
+    font-family:  'Georgia', Times, Times New Roman, serif; 
+    padding: 15px 0;   
+    }
+
+/* Nav Bar Baby */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color:#ffffff;
+    border-bottom: 3px solid;
+    border-color: #cccccc;
+    width: 100%;
+    padding: 0;
+    z-index: 3;
+}
+
+#header-content {
+    max-width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    padding: 0;
+    height: 90px;
+}
+
+header h1 {
+background-color: #4aaaa5;
+color: white;
+padding: 25px 20px;
+box-sizing: border-box;
+height: 100%;
+font-family:  'Georgia', Times, Times New Roman, serif;
+}
+
+#nav-bar ul {
+    display: flex;
+    flex-direction: row;
+}
+#nav-bar li {
+    padding: 0 10px;
+    list-style: none;
+    border-left: 1px solid #cccccc;
+}
+
+#nav-bar #about-link {
+    border-left: none; 
+}
+/* End of Nav Bar */
+
+/* Footer */
+
+
+/* Bio Page Styling */
+
+/*
+#bio {
+    background-color: #ffffff;
+    max-width: 960px;
+    padding: 25px;
+    margin-top: 180px;
+    overflow: auto;
+}*/
+
+.content-wrapper {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-top: 180px;
+    overflow: auto;
+    
+}
+
+#headshot {
+    float: left;
+    padding: 15px 20px 0px 0px;
+}
+
+#bio-writing {
+    padding: 15px 0px 0px;
+}
+
+#hello {
+    font-size: 25px;
+}
+
+#bellevue {
+    font-size: 20px;
+}
+
+#small-text {
+    font-size: 15px;
+}
+
+/* Bio Page Styling End*/
+
+/* Portfolio Page Styling */
+
+#portfolio-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 15px 0px 0px;
+    max-width: 100%;
+    gap: 10px 5%;
+ 
+}
+
+.portfolio-image {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#hangman-div, #rpg-game-div, #trivia-div, #info-widget-div, #rock-paper-scissors-div {
+    position: relative;
+    width: 100%;
+}
+
+.text-wrapper {
+    position: absolute;
+    color:  #ffffff;
+    background-color: #4aaaa5;
+    text-align: center;
+    width: 100%;
+    bottom: 10px;
+    left: 0px;
+    padding: 10px 0px;
+}
+/* End of portfolio styling */
+
+/*Contact Page Styling */
+
+#contact-div {
+    padding-top: 200px;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    padding: 15px 0px 0px 0px;
+}
+
+#comments-box-div {
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+#comments {
+    height: 200px;
+}
+
+input[type=text],input[type=email] {
+    width: auto;
+    height: 20px;
+    text-align: left;
+    border-radius: 5px;
+  }
+
+  input[type=submit] {
+      width: 150px;
+      height: 40px;
+      color: #ffffff;
+      background-color: #4aaaa5;
+      border: none;
+  }
+
+  /* Media Queries */
+
+  @media only screen and (max-width: 980px) {
+    #header-content {
+        margin: 0px 0px 0px 20px;
+        height: 78px;  
+      }
+    .content-wrapper {
+        margin: 156px 0px 0px 20px;
+    }
+    #portfolio-wrapper {
+        max-width: 100%;
+    }
+    .portfolio-image {
+        width: 100%;
+        height: auto;
+    }
+
+    #hangman-div, #rpg-game-div, #trivia-div, #info-widget-div, #rock-paper-scissors-div {
+        position: relative;
+        width: 100%;
+    }
+    .text-wrapper {
+        width: 100%;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    #header-content {
+        margin: 0px 0px 0px 20px;
+        height: 78px;  
+      }
+    .content-wrapper {
+        max-width: 768px;
+        margin: 156px 20px 20px 20px;
+    }
+
+    #portfolio-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 15px 0px 0px;
+    }
+    
+    .text-wrapper {
+        position: absolute;
+        color:  #ffffff;
+        background-color: #4aaaa5;
+        text-align: center;
+    }
+    .sticky-footer {
+        width: 100%;
+        max-width: 768px;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    
+    #header-content {
+        max-width: 100%;
+        flex-direction: column;
+        margin: 0 auto;
+        height: 80px;
+    }
+    header h1 {
+        font-size: 25px;
+        text-align: center;
+        padding: 5px 0px;
+        height: 50%;
+        width: 100%;
+        }
+
+    #nav-bar ul {
+            padding: 7px 0px;
+        }
+    .content-wrapper {
+        margin: 10px auto;
+        max-width: 80%;
+        padding: 0px 40px;
+        box-sizing: border-box;
+    }    
+    #portfolio-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 5px 5px;
+        }
+    #hangman-div, #rpg-game-div, #trivia-div, #info-widget-div, #rock-paper-scissors-div {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+        }
+    .portfolio-image {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .text-wrapper {
+        width: 100%;
+    }
+
+    header {
+        position: static;
+    }
+    .sticky-footer {
+        width: 100%;
+        max-width: 640px;
+    }
+
+    #headshot {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+    #contact-form {
+        padding-bottom: 10px;
+    }
+
+
+}
